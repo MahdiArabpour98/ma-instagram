@@ -1,7 +1,13 @@
+import { auth } from "@/auth";
 import Logo from "./logo";
+import MoreDropdown from "./more-dropdown";
 import NavLinks from "./nav-links";
+import ProfileLink from "./profile-link";
 
-const SideNav = () => {
+const SideNav = async () => {
+  const session = await auth();
+  const user = session?.user;
+
   return (
     <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <div
@@ -11,9 +17,9 @@ const SideNav = () => {
       >
         <Logo />
         <NavLinks />
-        {/* <ProfileLink/> */}
+        {user && <ProfileLink user={user} />}
         <div className="hidden md:flex relative md:mt-auto flex-1 items-end w-full">
-          {/* <MoreDropdown/> */}
+          <MoreDropdown />
         </div>
       </div>
     </div>
