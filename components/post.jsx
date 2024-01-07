@@ -6,7 +6,7 @@ import Link from "next/link";
 import Timestamp from "./timestamp";
 import { Card } from "./ui/card";
 import PostOptions from "./post-options";
-// import PostActions from "./PostActions";
+import PostActions from "./post-actions";
 
 async function Post({ post }) {
   const session = await auth();
@@ -45,7 +45,7 @@ async function Post({ post }) {
         <Image src={post.fileUrl} alt="Post Image" fill className="sm:rounded-md object-cover" />
       </Card>
 
-      {/* <PostActions post={post} userId={userId} className="px-3 sm:px-0" /> */}
+      <PostActions post={post} userId={userId} className="px-3 sm:px-0" />
 
       {post.caption && (
         <div className="text-sm leading-none flex items-center space-x-2 font-medium px-3 sm:px-0">
