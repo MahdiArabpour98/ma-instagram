@@ -2,7 +2,7 @@ import { auth } from "@/auth";
 import UserAvatar from "@/components/user-avatar";
 import Image from "next/image";
 import Link from "next/link";
-// import Comments from "./Comments";
+import Comments from "./comments";
 import Timestamp from "./timestamp";
 import { Card } from "./ui/card";
 import PostOptions from "./post-options";
@@ -56,7 +56,7 @@ async function Post({ post }) {
         </div>
       )}
 
-      {/* <Comments postId={post.id} comments={post.comments} user={session.user} /> */}
+      <Comments postId={post.id} comments={post.comments} user={session.user} />
     </div>
   );
 }
