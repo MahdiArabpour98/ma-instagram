@@ -3,7 +3,6 @@ import Post from "./post";
 
 async function Posts() {
   const posts = await fetchPosts();
-  console.log("posts", posts);
 
   return (
     <>
