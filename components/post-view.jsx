@@ -59,7 +59,7 @@ function PostView({ id, post }) {
 
           <div className="px-2 hidden md:block mt-auto border-b p-2.5">
             <PostActions post={post} userId={user?.id} />
-            <time className="text-[11px]  uppercase text-zinc-500 font-medium">
+            <time className="text-[11px] uppercase text-zinc-500 font-medium">
               {new Date(post.createdAt).toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",

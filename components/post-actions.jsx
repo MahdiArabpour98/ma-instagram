@@ -7,8 +7,6 @@ import ShareButton from "./share-button";
 import BookmarkButton from "./bookmark-button";
 
 function PostActions({ post, userId, className }) {
-  console.log("post,", post);
-  console.log(",userId", userId);
   return (
     <div className={cn("relative flex items-start w-full gap-x-2", className)}>
       <LikeButton post={post} userId={userId} />

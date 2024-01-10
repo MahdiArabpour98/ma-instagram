@@ -7,7 +7,6 @@ import { toast } from "sonner";
 import { deleteComment } from "@/lib/actions";
 
 function CommentOptions({ comment }) {
-  console.log("comm", comment);
   return (
     <Dialog>
       <DialogTrigger asChild>

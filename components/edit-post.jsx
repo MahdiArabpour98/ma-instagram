@@ -21,7 +21,6 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { z } from "zod";
 
 function EditPost({ id, post }) {
   const mount = useMount();
